@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/jpbc-api-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jpbc-plaf-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jpbc-crypto-2.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-lang3-3.12.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/iaik_eccelerate_addon.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/iaik_eccelerate_cms.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/iaik_eccelerate_ssl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/iaik_eccelerate.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/iaik_javax_crypto.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/iaik_jce_native_aes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/iaik_jce.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/opencsv-5.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/libs/commons-lang3-3.12.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/sources/jpbc-crypto-2.0.0.zip!/jpbc-crypto/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/sources/jpbc-crypto-2.0.0.zip!/jpbc-crypto/src/test/java" />
+      <root url="jar://$PROJECT_DIR$/libs/commons-lang3-3.12.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
