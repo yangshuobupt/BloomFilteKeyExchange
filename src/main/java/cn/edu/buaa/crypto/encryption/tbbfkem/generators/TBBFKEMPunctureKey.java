@@ -1,9 +1,6 @@
 package cn.edu.buaa.crypto.encryption.tbbfkem.generators;
 
-import cn.edu.buaa.crypto.algebra.serparams.PairingCipherSerParameter;
 import cn.edu.buaa.crypto.algebra.serparams.PairingKeySerParameter;
-import cn.edu.buaa.crypto.encryption.fspibme.serparams.FSPIBMECiphertextSerParameter;
-import cn.edu.buaa.crypto.encryption.fspibme.serparams.FSPIBMEKeySerParameter;
 import cn.edu.buaa.crypto.encryption.hibe.bbg05.HIBEBBG05Engine;
 import cn.edu.buaa.crypto.encryption.hibe.bbg05.serparams.HIBEBBG05PublicKeySerParameter;
 import cn.edu.buaa.crypto.encryption.hibe.bbg05.serparams.HIBEBBG05SecretKeySerParameter;
@@ -15,9 +12,12 @@ import it.unisa.dia.gas.jpbc.Pairing;
 import it.unisa.dia.gas.plaf.jpbc.pairing.PairingFactory;
 import org.bouncycastle.crypto.InvalidCipherTextException;
 
-public class TBBFKEMDecryptionGenerator {
+import java.math.BigInteger;
+
+public class TBBFKEMPunctureKey {
+
     private HIBEBBG05PublicKeySerParameter publicKeyParameter;
-    private TBBFKEMCiphertextParameter C;
+    private TBBFKEMCiphertextParameter cipherText;
     private TBBFKEMSecretKeyParameter sk;
     private HIBEBBG05Engine hibebbg05Engine;
 
@@ -26,11 +26,16 @@ public class TBBFKEMDecryptionGenerator {
         this.hibebbg05Engine = hibebbg05Engine;
         this.publicKeyParameter = (HIBEBBG05PublicKeySerParameter) publicKey;
         this.sk = sk;
-        this.C = C;
+        this.cipherText = C;
     }
 
     public Element computeDecapsulation() throws InvalidCipherTextException {
         Pairing pairing = PairingFactory.getPairing(publicKeyParameter.getParameters());
+
+        int[] affectedIndexes = sk.getFilter().add(new BigInteger(cipherText.getC()));
+        for (int affectedIndex : affectedIndexes) {
+            sk.getSk_bloom().
+        }
 
         HIBEBBG05SecretKeySerParameter secretKeyParameters = (HIBEBBG05SecretKeySerParameter) dk.getTk().get("E000");
         Element sig = ciphertext.getSig();
